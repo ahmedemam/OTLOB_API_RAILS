@@ -3,6 +3,7 @@ development:
   clients:
     # Defines the default client. (required)
     default:
+      uri: "mongodb+srv://root:root@ahmedelshall-cqaq5.mongodb.net/new_otlob_api_development?retryWrites=true"
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
       database: new_otlob_api_development
