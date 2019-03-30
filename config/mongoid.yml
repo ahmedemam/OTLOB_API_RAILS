@@ -6,12 +6,16 @@ development:
       uri: "mongodb+srv://root:root@ahmedelshall-cqaq5.mongodb.net/new_otlob_api_development?retryWrites=true"
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
-      database: new_otlob_api_development
+
+      #database: new_otlob_api_development
+
       # Provides the hosts the default client can connect to. Must be an array
       # of host:port pairs. (required)
-      hosts:
-        - localhost:27017
-      options:
+
+#      hosts:
+#        - localhost:27017
+#      options:
+
         # Note that all options listed below are Ruby driver client options (the mongo gem).
         # Please refer to the driver documentation of the version of the mongo gem you are using
         # for the most up-to-date list of options.
@@ -153,13 +157,13 @@ development:
 
     # Use background indexes by default if `background` option not specified. (default: false)
     # background_indexing: false
-test:
-  clients:
-    default:
-      database: new_otlob_api_test
-      hosts:
-        - localhost:27017
-      options:
-        read:
-          mode: :primary
-        max_pool_size: 1
+#test:
+#  clients:
+#    default:
+#      database: new_otlob_api_test
+#      hosts:
+#        - localhost:27017
+#      options:
+#        read:
+#          mode: :primary
+#        max_pool_size: 1
