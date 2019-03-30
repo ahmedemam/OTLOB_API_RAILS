@@ -34,10 +34,10 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
-
+gem 'rack-cors', '~> 1.0', '>= 1.0.3'
 gem 'mongoid', '~> 7.0', '>= 7.0.2'
 gem 'database_cleaner', '~> 1.7'
-gem 'factory_girl_rails', '~> 4.9'
+# gem 'factory_girl_rails', '~> 4.9'
 gem 'rspec-core', '~> 3.8'
 gem 'simplecov', '~> 0.16.1'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
