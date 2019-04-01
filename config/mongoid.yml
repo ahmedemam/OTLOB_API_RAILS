@@ -144,3 +144,5 @@ production:
 #    skip_version_check: true
 
 # MONGO-HQ: solution
+# MONGO-LAB: solution
+
