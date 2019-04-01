@@ -1,0 +1,9 @@
+          Prefix Verb   URI Pattern               Controller#Action
+   v1_user_index GET    /v1/user(.:format)        v1/user#index
+                 POST   /v1/user(.:format)        v1/user#create
+         v1_user GET    /v1/user/:id(.:format)    v1/user#show
+                 PATCH  /v1/user/:id(.:format)    v1/user#update
+                 PUT    /v1/user/:id(.:format)    v1/user#update
+                 DELETE /v1/user/:id(.:format)    v1/user#destroy
+v1_session_index POST   /v1/session(.:format)     v1/session#create
+      v1_session DELETE /v1/session/:id(.:format) v1/session#destroy
