@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-git_source(:github) {|repo| "https://github.com/#{repo}.git"}
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.1'
 
@@ -34,12 +34,8 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
-gem 'rack-cors'
-gem 'mongoid'
-gem 'rspec-rails'
-gem "heroku_mongoid"
-gem 'mongoid_rails_migrations'
-gem 'mongoid-rails'
+gem 'rack-cors', '~> 1.0', '>= 1.0.3'
+gem 'mongoid', '~> 7.0', '>= 7.0.2'
 gem 'database_cleaner', '~> 1.7'
 gem 'devise', '~> 4.6', '>= 4.6.2'
 # gem 'factory_girl_rails', '~> 4.9'
