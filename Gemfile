@@ -38,8 +38,12 @@ gem 'rack-cors', '~> 1.0', '>= 1.0.3'
 gem 'mongoid', '~> 7.0', '>= 7.0.2'
 gem 'database_cleaner', '~> 1.7'
 gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'simple_token_authentication', '~> 1.0' # see semver.org
+
 # gem 'factory_girl_rails', '~> 4.9'
 gem 'rspec-core', '~> 3.8'
 gem 'simplecov', '~> 0.16.1'
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+# gem 'simple_token_authentication'
+# gem 'jwt', '~> 2.1'
+gem 'knock'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
