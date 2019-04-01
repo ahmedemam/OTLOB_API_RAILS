@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccb741d3-7909-4e95-91c7-40e8207e1c11" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/NEW_OTLOB_API.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/NEW_OTLOB_API.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/v1/session_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/v1/session_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/mongoid.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/mongoid.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -54,8 +48,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/mongoid.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="106" selection-start-line="5" selection-start-column="106" selection-end-line="5" selection-end-column="106" />
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-start-column="1" selection-end-line="7" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -305,12 +299,12 @@
       <workItem from="1553962177533" duration="293000" />
       <workItem from="1553995838954" duration="837000" />
       <workItem from="1554046004491" duration="2297000" />
-      <workItem from="1554123149127" duration="2845000" />
+      <workItem from="1554123149127" duration="3848000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17462000" />
+    <option name="totallyTimeSpent" value="18465000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1366" height="738" extended-state="6" />
@@ -473,8 +467,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/mongoid.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="106" selection-start-line="5" selection-start-column="106" selection-end-line="5" selection-end-column="106" />
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-start-column="1" selection-end-line="7" selection-end-column="36" />
         </state>
       </provider>
     </entry>
