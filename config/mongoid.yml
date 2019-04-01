@@ -4,8 +4,8 @@ development:
     # Defines the default client. (required)
     default:
 
-#      # ENV['MONGO_URL'] = 'mongodb+srv://root:root@ahmedelshall-cqaq5.mongodb.net/otlob?retryWrites=true'
-#      uri: <%= ENV['MONGO_URI'] %>;
+      #      # ENV['MONGO_URL'] = 'mongodb+srv://root:root@ahmedelshall-cqaq5.mongodb.net/otlob?retryWrites=true'
+      #      uri: <%= ENV['MONGO_URI'] %>;
       uri: "mongodb+srv://root:root@ahmedelshall-cqaq5.mongodb.net/otlob?retryWrites=true"
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
@@ -134,5 +134,13 @@ test:
         max_pool_size: 1
 
 
+
 production:
-  uri: <%= ENV['MONGO_URL'] %>
+  sessions:
+    default:
+      uri: <%= ENV['MONGODB_URL'] %>
+#  max_retries_on_connection_failure: 20
+#    persist_in_safe_mode: true
+#    skip_version_check: true
+
+# MONGO-HQ: solution
