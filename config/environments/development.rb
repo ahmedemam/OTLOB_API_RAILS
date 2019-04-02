@@ -19,13 +19,17 @@ Rails.application.configure do
 
     config.cache_store = :memory_store
     config.public_file_server.headers = {
-      'Cache-Control' => "public, max-age=#{2.days.to_i}"
+        'Cache-Control' => "public, max-age=#{2.days.to_i}"
     }
   else
     config.action_controller.perform_caching = false
 
     config.cache_store = :null_store
   end
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {address: 'localhost', port: 1025}
+  config.action_mailer.default_url_options = {host: 'localhost:8080'}
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false

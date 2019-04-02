@@ -43,6 +43,8 @@ gem 'simple_token_authentication', '~> 1.0' # see semver.org
 # gem 'factory_girl_rails', '~> 4.9'
 gem 'rspec-core', '~> 3.8'
 gem 'simplecov', '~> 0.16.1'
+gem 'jbuilder', '~> 2.8'
+gem 'mailcatcher'
 # gem 'simple_token_authentication'
 # gem 'jwt', '~> 2.1'
 gem 'knock'
