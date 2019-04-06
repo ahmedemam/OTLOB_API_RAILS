@@ -7,8 +7,15 @@ class V1::UserController < ApplicationController
 
   # create-user
   def create
-    @user = User.new(user_params)
-    @user.save
+    # @user = User.new(user_params).save
+    # @user.save
+
+    @user=User.create!({
+      name: params[:name],
+      email: params[:email],
+      password: params[:password],
+      
+    })
     render json: @user, status: :created
   end
 
@@ -20,11 +27,13 @@ class V1::UserController < ApplicationController
       head(:unprocessable_entity)
     end
   end
+  def show
+  end
 
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password)
+    params.require(:user).permit(:name, :email, :password,:image)
   end
 end
 
