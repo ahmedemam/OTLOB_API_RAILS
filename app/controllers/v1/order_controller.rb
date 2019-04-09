@@ -58,9 +58,83 @@ class V1::OrderController < ApplicationController
 
 
 
+def get_order_by_id
+
+  
+     user = User.find(params[:user_id])
+    speceficOrder= user.orders.find(params[:order_id])
+     render json: speceficOrder, status: :ok
 
 
+end
 
 
+def delete_order
+  
+     user = User.find(params[:user_id])
+     deleted_Order=user.orders.find(params[:order_id]).destroy
+     render json: deleted_Order, status: :ok
 
+end
+def add_friend_to_order
+
+      user = User.find(params[:user_id])
+      myorder=user.orders.find(params[:order_id])
+      fr=myorder.add_to_set(members:[params[:friend_id]]);
+      render json: fr, status: :ok
+
+end
+
+
+def delete_friend_from_order
+
+ 
+    user = User.find(params[:user_id])
+    myorder=user.orders.find(params[:order_id])
+    delFr=myorder.pull(members:params[:friend_id])
+    render json: delFr, status: :ok
+    
+  
+end
+
+def get_member_of_order
+
+    
+        user = User.find(params[:user_id])
+        myorder=user.orders.find(params[:order_id])
+       mem= myorder["members"]
+       render json: mem, status: :ok
+       
+end
+
+def add_group_to_order
+   
+        
+          user = User.find(params[:user_id])
+          myorder=user.orders.find(params[:order_d])
+          
+       added= myorder.add_to_set(membergroup:[params[:group_id]])
+       render json: added, status: :ok
+end
+
+def delete_group_from_order
+    
+ 
+        user = User.find(params[:user_id])
+        myorder=user.orders.find(params[:order_id])
+        deleted=myorder.pull(membergroup:params[:group_id])
+        render json: deleted, status: :ok
+        
+end
+
+def get_group_from_order
+
+
+  user = User.find(params[:user_id])
+  myorder=user.orders.find(params[:order_id])
+  g=user.groups.find(params[:group_id])
+  render json: g, status: :ok
+
+
+end
 end

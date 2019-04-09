@@ -10,8 +10,10 @@ Rails.application.routes.draw do
    post "/user/:user_id/order" => "order#create_order"
    put  "/user/:user_id/order/:order_id" => "order#update_order"
    put  "/user/:user_id/order/:order_id/status" => "order#update_status"
-
-
+   get "/user/:user_id/order/:order_id" => "order#get_order_by_id"
+   put  "/user/:user_id/order/:order_id/friend/:friend_id" => "order#add_friend_to_order"
+   put  "/user/:user_id/order/:order_id/group/:group_id" => "order#add_group_to_order"
+   delete  "/user/:user_id/order/:order_id/group/:group_id" => "order#delete_group_from_order"
 
 
    ####################
