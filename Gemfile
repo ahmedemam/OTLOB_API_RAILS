@@ -1,7 +1,7 @@
-source 'https://rubygems.org'
-git_source(:github) {|repo| "https://github.com/#{repo}.git"}
+# source 'https://rubygems.org'
+# git_source(:github) {|repo| "https://github.com/#{repo}.git"}
 
-ruby '2.6.0'
+ruby '2.6.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2', '>= 5.2.2.1'
@@ -40,7 +40,7 @@ gem 'mongoid', '~> 7.0', '>= 7.0.2'
 gem 'database_cleaner', '~> 1.7'
 gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'simple_token_authentication', '~> 1.0' # see semver.org
-
+gem 'omniauth-facebook', '~> 5.0'
 # gem 'factory_girl_rails', '~> 4.9'
 gem 'rspec-core', '~> 3.8'
 gem 'simplecov', '~> 0.16.1'

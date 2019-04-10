@@ -1,5 +1,4 @@
 class V1::UserController < ApplicationController
-
   # get-all-users
   def index
     users = User.all
@@ -43,3 +42,10 @@ class V1::UserController < ApplicationController
   end
 end
 
+# Forget: Mailer
+# Friends:
+# Groups:
+# Orders:
+# Items:
+# Facebook/Google
+# Notification
