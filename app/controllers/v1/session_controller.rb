@@ -1,7 +1,7 @@
 class V1::SessionController < ApplicationController
 
   # sign-in
-  def create
+  def login
     user_password = params[:session][:password]
     user_email = params[:session][:email]
     @user = user_email.present? && User.find_by(email: user_email)
