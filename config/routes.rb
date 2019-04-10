@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   # devise_for :users
   namespace :v1, defaults: {format: :json} do
     #########################
+    post "/user" => "user#create"
+    get "/user" =>"user#index"
    get "/user/:user_id/friend" => "friend#get_friend"
    post "/user/:user_id/friend" => "friend#create_friend"
    delete "/user/:user_id/friend/:friend_id" => "friend#delete_friend"

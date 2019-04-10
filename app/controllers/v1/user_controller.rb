@@ -2,8 +2,8 @@ class V1::UserController < ApplicationController
 
   # get-all-users
   def index
-    @users = User.all
-    render json: @users, status: :ok
+    users = User.all
+    render json: users, status: :ok
   end
 
   # create-user
@@ -18,6 +18,11 @@ class V1::UserController < ApplicationController
       
     })
     render json: @user, status: :created
+  end
+  def login
+    find=User.find({email:params[:email],password: params[:password]});
+    render json: find, status: :created
+
   end
 
   def destroy
