@@ -2,8 +2,10 @@ Rails.application.routes.draw do
   # devise_for :users
   namespace :v1, defaults: {format: :json} do
     #########################
+
     post "/user" => "user#create"
     get "/user" =>"user#index"
+    # post "/user/login" =>"session#create"
    get "/user/:user_id/friend" => "friend#get_friend"
    post "/user/:user_id/friend" => "friend#create_friend"
    delete "/user/:user_id/friend/:friend_id" => "friend#delete_friend"
@@ -16,6 +18,7 @@ Rails.application.routes.draw do
    put  "/user/:user_id/order/:order_id/friend/:friend_id" => "order#add_friend_to_order"
    put  "/user/:user_id/order/:order_id/group/:group_id" => "order#add_group_to_order"
    delete  "/user/:user_id/order/:order_id/group/:group_id" => "order#delete_group_from_order"
+
 
   ###################################################################
    get "/user/:user_id/group" => "group#get_groups"
@@ -31,6 +34,8 @@ Rails.application.routes.draw do
 
 
    ####################
+
+  ####################
     resources :user do
       resources :friend
 
@@ -39,5 +44,5 @@ Rails.application.routes.draw do
     resources :session, only: [:create, :destroy]
     
   end
- 
+
 end
