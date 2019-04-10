@@ -9,26 +9,26 @@ class V1::OrderController < ApplicationController
   def create_order
     user = User.find(params[:user_id])
     userorder = user.orders.find_or_create_by!({
-                                                   name: params[:name],
-                                                   restaurantName: params[:restaurantName],
-                                                   menuImage: params[:menuImage],
-                                                   status: params[:status],
-                                                   totalPrice: params[:totalPrice]
+          name: params[:name],
+          restaurantName: params[:restaurantName],
+          menuImage: params[:menuImage],
+          status: params[:status],
+           totalPrice: params[:totalPrice]
 
-                                               })
+            })
     render json: userorder, status: :ok
   end
 
   def update_order
     user = User.find(params[:user_id])
     updatedorder = user.orders.find(params[:order_id]).update!({
-                                                                   name: params[:name],
-                                                                   restaurantName: params[:restaurantName],
-                                                                   menuImage: params[:menuImage],
-                                                                   status: params[:status]
+         name: params[:name],
+         restaurantName: params[:restaurantName],
+         menuImage: params[:menuImage],
+         status: params[:status]
 
 
-                                                               })
+         })
 
     render json: updatedorder, status: :ok
   end
@@ -40,13 +40,11 @@ class V1::OrderController < ApplicationController
     restaurantName = myorder["restaurantName"]
     menuImage = myorder["menuImage"]
     statusupdated = user.orders.find(params[:order_id]).update!({
-                                                                    name: name,
-                                                                    restaurantName: restaurantName,
-                                                                    menuImage: menuImage,
-                                                                    status: params[:status]
-
-
-                                                                })
+        name: name,
+        restaurantName: restaurantName,
+        menuImage: menuImage,
+        status: params[:status]
+        })
     render json: statusupdated, status: :ok
 
    end
@@ -134,4 +132,5 @@ def get_group_from_order
   end
 
 end
-end
+
+

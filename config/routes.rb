@@ -17,6 +17,18 @@ Rails.application.routes.draw do
    put  "/user/:user_id/order/:order_id/group/:group_id" => "order#add_group_to_order"
    delete  "/user/:user_id/order/:order_id/group/:group_id" => "order#delete_group_from_order"
 
+  ###################################################################
+   get "/user/:user_id/group" => "group#get_groups"
+   post "/user/:user_id/group" => "group#create_group"
+   put  "/user/:user_id/group/:group_id" => "group#update_group"
+   delete  "/user/:user_id/group/:group_id" => "group#delete_group"
+   post  "/user/:user_id/group/friend/friend_id/:group_id" => "group#add_friend_to_group"
+
+
+
+
+
+
 
    ####################
     resources :user do
