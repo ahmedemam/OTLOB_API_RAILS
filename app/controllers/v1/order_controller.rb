@@ -40,13 +40,10 @@ class V1::OrderController < ApplicationController
     restaurantName = myorder["restaurantName"]
     menuImage = myorder["menuImage"]
     statusupdated = user.orders.find(params[:order_id]).update!({
-                                                                    name: name,
-                                                                    restaurantName: restaurantName,
-                                                                    menuImage: menuImage,
-                                                                    status: params[:status]
-
-
-                                                                })
+       name: name,
+       restaurantName: restaurantName,
+       menuImage: menuImage,
+       status: params[:status]  })
     render json: statusupdated, status: :ok
 
    end
