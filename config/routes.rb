@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+
+  mount_devise_token_auth_for 'User', at: 'auth', skip: [:omniauth_callbacks]
+  post 'auth/request', to:'authorization#get_authorization'
+
   # devise_for :users
   namespace :v1, defaults: {format: :json} do
     #########################
@@ -23,6 +28,12 @@ Rails.application.routes.draw do
    get  "/user/:user_id/order/:order_id/items" => "item#get_items_of_order"
    put  "/user/:user_id/order/:order_id/friend/:friend_id/items/:item_id" => "item#update_item"
    ####################
+    get "/user/:user_id/group" => "group#get_groups"
+   post "/user/:user_id/group" => "group#create_group"
+   put "/user/:user_id/group/:group_id" => "group#update_group"
+   delete  "/user/:user_id/group/:group_id" => "group#delete_group"
+   post "/user/:user_id/group/friend/:friend_id/:order_id" => "group#add_friend_to_group"
+
 
   ####################
     resources :user do
