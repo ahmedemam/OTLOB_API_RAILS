@@ -15,6 +15,7 @@ Rails.application.routes.draw do
    post "/user/:user_id/friend" => "friend#create_friend"
    delete "/user/:user_id/friend/:friend_id" => "friend#delete_friend"
    ###############################
+   
    get "/user/:user_id/order" => "order#get_orders"
    post "/user/:user_id/order" => "order#create_order"
    put  "/user/:user_id/order/:order_id" => "order#update_order"
@@ -36,11 +37,10 @@ Rails.application.routes.draw do
 
 
   ####################
-    resources :user do
-      resources :friend
-
-    end
-    resources :user
+    # resources :user do
+    #   resources :friend
+    # end
+    # resources :user, only:[:index]
     resources :session, only: [:create, :destroy]
     
   end
