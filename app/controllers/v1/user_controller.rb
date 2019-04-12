@@ -14,6 +14,7 @@ class V1::UserController < ApplicationController
       name: params[:name],
       email: params[:email],
       password: params[:password],
+      image:params[:image]
       
     })
     render json: @user, status: :created

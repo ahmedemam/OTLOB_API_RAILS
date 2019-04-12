@@ -35,6 +35,7 @@ module NEWOtlobApi
       allow do
         origins '*'
         resource '*', headers: :any, methods: [:get, :post, :put, :delete, :options]
+        # Access-Control-Allow-Credentials: true
       end
     end
 
