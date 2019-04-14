@@ -31,7 +31,29 @@ class V1::GroupController < ApplicationController
         
   end
 
-  def add_friend_to_group
+  def get_one_group
+    user = User.find(params[:user_id])
+    group=user.groups.find(params[:group_id])
+    friendsid=group['friends'];
+    data=friendsid.map{|friend|user.friends.find(friend['friend_id'])};
+    data.push({name:group.name,_id:group._id});
+
+    render json: data, status: :ok
+  end
+  
+
+
+
+  def get_one_group1 ( user_id,group_id)
+    user = User.find(user_id)
+    group=user.groups.find(group_id)
+    friendsid=group['friends'];
+    data=friendsid.map{|friend|user.friends.find(friend['friend_id'])};
+    data.push({name:group.name,_id:group._id});
+
+    render json: data, status: :ok
+  end
+  def add_friend_to_group2
      user = User.find(params[:user_id])
             group = user.groups.find(params[:group_id])
             group.friends.create!(friend_id:params[:friend_id]);
@@ -41,6 +63,16 @@ class V1::GroupController < ApplicationController
 
   end
 
+  def add_friend_to_group
+    user = User.find(params[:user_id])
+           group = user.groups.find(params[:group_id])
+           frnds=user.friends.find_by(friend_id:params[:friend_id])
+           friend=group.friends.create!(friend_id:params[:friend_id],name:frnds.name,email:frnds.email);
+          # friendData=user.friends.find(params[:friend_id])
+    render json: friend, status: :ok
+    
+
+ end
 
 
 
