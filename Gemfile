@@ -41,7 +41,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
-gem 'rack-cors', '~> 1.0', '>= 1.0.3'
+gem 'rack-cors', '~> 1.0'
 gem 'mongoid', '~> 7.0', '>= 7.0.2'
 gem 'database_cleaner', '~> 1.7'
 gem 'devise', '~> 4.6', '>= 4.6.2'
